@@ -1,0 +1,44 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/petshop
+    username: root
+    password: 8271
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: petshopsmu@gmail.com
+    password: r a q r b m k r m a s g e a j e
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+            required: true
+          auth: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+    auth-code-expiration-millis: 1800000  # 30 * 60 * 1000 == 30분
+
+
+kakao:
+  client_id: ff9ceddeab46bbdb2cd959ecdc4a8cf7
+  client_secret : j0UiZukPsWR7OnSwoEmJWcpGC8LlJWvu
+  redirect_uri: http://localhost:8080/kakao/login
+
+
+
+logging.level:
+  org.hibernate.SQL: debug
+  org.hibernate.type: trace
+
+
