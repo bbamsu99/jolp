@@ -48,10 +48,10 @@ public class MemberController {
 //            EmailController;
 
             if(EmailController.checkingEmailFirst(member) == true){
-                if(EmailController.checkingEmailSecond(member)==true){
+                log.info("이메일 전달 완료");
+                if(EmailController.checkingEmailSecond(member)==true) {
                     memberService.join(member);
                     log.info("회원가입 완료");
-
                     return ResponseEntity.ok("ok");
 
                 }

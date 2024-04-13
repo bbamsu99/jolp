@@ -33,7 +33,7 @@ public class EmailTokenService {
     }
 
     //인증번호 random 함수 분리 필요??
-    public static String createKey() { //static?
+    public static String createKey() {
         StringBuilder key = new StringBuilder(); //Stringbuffer?
         Random random = new Random();
 

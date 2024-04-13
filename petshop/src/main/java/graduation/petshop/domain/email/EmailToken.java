@@ -18,16 +18,17 @@ public class EmailToken {
     private static final long EMAIL_TOKEN_EXPIRATION_TIME_VALUE = 5L; // 제한시간
 
     private LocalDateTime expirationDate;
-    private boolean expired;
+//    private boolean expired;
     private Member tokenmember;
 
     public static EmailToken createEmailToken(Member member) {
         EmailToken emailToken = new EmailToken();
         emailToken.expirationDate = LocalDateTime.now().plusMinutes(EMAIL_TOKEN_EXPIRATION_TIME_VALUE);
-        emailToken.expired = false;
+//        emailToken.expired = false;
         emailToken.tokenmember = member;
 
         return emailToken;
     }
+
 
 }
